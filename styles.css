@@ -1,0 +1,39 @@
+
+body{
+    height:100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.btnClear {
+    border: 0.1em solid black;
+    border-radius: 4px;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display:flex;
+    /* flex-direction: row;    */
+    flex-wrap: wrap;
+    justify-content:center; 
+    margin: 25%;
+    margin-top: 5%;
+}
+
+.square{
+    width: 20%;
+    padding-bottom: 20%;
+    border: 0.1em solid black;
+    border-radius: 4px;
+    flex: 0 0 auto;
+}
+
+.squareHovered{
+    background-color: salmon;
+}
