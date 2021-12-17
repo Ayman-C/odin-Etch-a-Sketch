@@ -1,15 +1,20 @@
 
 body{
     height:100%;
+    background-color: black;
 }
 
 h1 {
     text-align: center;
+    color:salmon
 }
 
 .btnClear {
-    border: 0.1em solid black;
+    border: 0.1em solid salmon;
     border-radius: 4px;
+    background-color: black;
+    color:salmon
+
 }
 
 .btnContainer {
@@ -29,7 +34,7 @@ h1 {
 .square{
     width: 20%;
     padding-bottom: 20%;
-    border: 0.1em solid black;
+    border: 0.1em solid salmon;
     border-radius: 4px;
     flex: 0 0 auto;
 }
