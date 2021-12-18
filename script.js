@@ -1,5 +1,5 @@
 const container=document.querySelector(".container")
-let rowlenght=10;
+let rowlenght=50;
 let gridSize=rowlenght**2;
 let squareSize=`${100/rowlenght}%`
 createGrid()
