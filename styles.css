@@ -8,11 +8,6 @@ h1 {
     color:salmon
 }
 
-.btnClear .btnColor{
-    border: 0.1em solid;
-    border-radius: 4px;
-    background-color: lightgrey;
-}
 
 .btnContainer {
     display: flex;
@@ -34,3 +29,38 @@ h1 {
     background-color: white;
 }
 
+.btnBlack{
+    color: black;
+    background-color: black;
+    border-radius: 10px;
+    width: 4%;
+}
+
+.btnRed{
+    color: red;
+    background-color: red;
+    border-radius: 10px;
+    width: 4%;
+}
+
+.btnBlue{
+    color: blue;
+    background-color: blue;
+    border-radius: 10px;
+    width: 4%;
+}
+
+.btnGreen{
+    color: green;
+    background-color: green;
+    border-radius: 10px;
+    width: 4%;
+    
+}
+
+.btnClear {
+    color: black;
+    background-color: with;
+    border-radius: 10px;
+    margin: 0 2%;
+}

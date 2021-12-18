@@ -1,7 +1,7 @@
 const container=document.querySelector(".container")
-let rowlenght=50;
-let gridSize=rowlenght**2;
-let squareSize=`${100/rowlenght}%`
+let rowLenght=50;
+let gridSize=rowLenght**2;
+let squareSize=`${100/rowLenght}%`
 createGrid()
 hoverDisplay()
 chooseColor()
@@ -57,9 +57,9 @@ function deleteGrid() {
 }
 
 function chooseGridSize() {
-    rowlenght=window.prompt("Please pick a grid row lenght")
-    gridSize=rowlenght**2
-    squareSize=`${100/rowlenght}%`
+    rowLenght=window.prompt("Please pick a grid row lenght")
+    gridSize=rowLenght**2
+    squareSize=`${100/rowLenght}%`
 }
 
 
