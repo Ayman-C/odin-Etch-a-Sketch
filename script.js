@@ -4,12 +4,11 @@ let gridSize=rowlenght**2;
 let squareSize=`${100/rowlenght}%`
 createGrid()
 hoverDisplay()
+chooseColor()
 onClickReset()
 
 function createGrid(){
-    console.log(rowlenght)
-    console.log("test1212")
-    for (let i=0 ; i<gridSize ;i++ ) {
+    for (let i=0 ; i<gridSize ; i++ ) {
         let square=document.createElement("div")
         square.id="square"+i
         square.classList="square"
@@ -19,12 +18,13 @@ function createGrid(){
     }
 }
 
-function hoverDisplay(){
+function hoverDisplay(color='black'){
     const squares=document.querySelectorAll(".square");
     squares.forEach(gridSquare => {
         gridSquare.addEventListener("mouseover" , function(evt) {
-            // evt.target.style.background="pink"
-            evt.target.classList.add("squareHovered")
+            //evt.target.style.background="pink"
+            evt.target.style.background=color
+            //evt.target.classList.add("squareHovered")
         })
     })
 }
@@ -35,7 +35,14 @@ const btn=document.querySelector(".btnClear")
      btn.addEventListener("click", deleteGrid)
      btn.addEventListener("click", chooseGridSize)
      btn.addEventListener("click", createGrid)
-     btn.addEventListener("click", hoverDisplay)
+     btn.addEventListener("click", function() {hoverDisplay('black')})
+    }
+
+function chooseColor(){
+    const btns=document.querySelectorAll(".btnColor")
+    btns.forEach(btn => {
+        btn.addEventListener("click", function() {hoverDisplay(this.textContent)})
+        })
     }
 
 function removeHover(){
@@ -54,5 +61,6 @@ function chooseGridSize() {
     gridSize=rowlenght**2
     squareSize=`${100/rowlenght}%`
 }
+
 
     
