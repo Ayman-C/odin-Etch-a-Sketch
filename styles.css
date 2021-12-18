@@ -32,11 +32,12 @@ h1 {
 }
 
 .square{
-    width: 20%;
-    padding-bottom: 20%;
+    /* width: 10.8%;
+    padding-bottom: 20%; */
     border: 0.1em solid salmon;
     border-radius: 4px;
     flex: 0 0 auto;
+    box-sizing: border-box;
 }
 
 .squareHovered{
