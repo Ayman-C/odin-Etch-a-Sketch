@@ -76,6 +76,11 @@ h1, footer {
     margin: 1% 2.5px;
 }
 
+.btnClear {
+    margin-left: 17.5%;
+    background-color: black;
+}
+
 footer {
     display:inline-block;
 }

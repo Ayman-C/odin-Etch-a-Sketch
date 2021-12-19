@@ -14,7 +14,8 @@ function createGrid(){
     for (let i=0 ; i<gridSize ; i++ ) {
         let square=document.createElement("div")
         square.id="square"+i
-        square.classList="square"
+        square.classList.add("square")
+        square.classList.add("pixel")
         square.style.width=squareSize
         square.style.paddingBottom=squareSize
         container.append(square)
@@ -30,8 +31,8 @@ function toggleContainerGrid(onOff) {
     }
 }
 function hoverDisplay(color='black'){
-    const squares=document.querySelectorAll(".square");
-    squares.forEach(gridSquare => {
+    const pixels=document.querySelectorAll(".pixel");
+    pixels.forEach(gridSquare => {
         gridSquare.addEventListener("mouseover" , function(evt) {
             if (color==="rainbow") {
                 evt.target.style.background=randomHexColor();
@@ -43,13 +44,13 @@ function hoverDisplay(color='black'){
     })
 }
 function onClickReset(){
-const btn=document.querySelector(".btnClear")
-     btn.addEventListener("click", deleteGrid)
-     btn.addEventListener("click", function() {toggleContainerGrid(false)})
-     btn.addEventListener("click", chooseGridSize)
-     btn.addEventListener("click", createGrid)
-     btn.addEventListener("click", function() {toggleContainerGrid(true)})
-     btn.addEventListener("click", function() {hoverDisplay('black')})
+const btn=document.querySelector(".btnClear");
+     btn.addEventListener("click", deleteGrid);
+     btn.addEventListener("click", function() {toggleContainerGrid(false)});
+     btn.addEventListener("click", chooseGridSize);
+     btn.addEventListener("click", createGrid);
+     btn.addEventListener("click", function() {toggleContainerGrid(true)});
+     btn.addEventListener("click", function() {hoverDisplay('black')});
     }
 function chooseColor(){
     const btns=document.querySelectorAll(".btnColor")
@@ -64,11 +65,11 @@ function Eraser(){
 function gridShape(){
     const btn=document.querySelector(".btnShape");
     btn.addEventListener("click", toggleGridShape);
-    console.log("test")
 }
 function deleteGrid() {
-    const squares=document.querySelectorAll(".square");
-    squares.forEach(square=>square.remove())
+    const shapes=document.querySelectorAll(".pixel");
+    shapes.forEach(shape=>shape.remove())
+    document.querySelector(".btnShape").textContent="circle"
 }
 function chooseGridSize() {
     rowLenght=window.prompt("Please pick a grid row lenght")
@@ -101,3 +102,4 @@ function toggleGridShape(){
     }
     
 }
+
