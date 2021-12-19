@@ -1,12 +1,15 @@
 body{
     height:100vh;
-    background-color: lightgrey;
+    background-color: #f4b3ce;
 }
 
-h1 {
+h1, footer {
     text-align: center;
-    color:blue
+    color: #8C88BA;
+    font-family: DotGothic16-Regular , Arial , Helvetica;
+    font-weight: bold;
 }
+
 .btnContainer {
     display: flex;
     justify-content: center;
@@ -17,11 +20,12 @@ h1 {
     justify-content:center; 
     margin: 30%;
     margin-top: 2.5%;
+    background-color: white;
+    border-radius: 6px;
 
 }
 .gridContainer {
-    border: 1em solid darkblue; 
-    border-radius: 6px;
+    border: 2em solid #68d1c5; 
 }
 .square{
     height: 0;
@@ -71,8 +75,6 @@ h1 {
 .btnColor:focus{
     border:0.2em solid yellow;
 }
-
-
 .btnClear {
     color: black;
     background-color: with;
@@ -80,3 +82,20 @@ h1 {
     margin: 0 2%;
     width: 4%;
 }
+button {
+    outline:none
+}
+footer {
+    background-color: darkgrey;
+    padding: 10px 0;
+    font-weight: bold;
+    display: flex;
+    flex-direction: block;
+
+}
+
+
+
+@font-face { 
+    font-family: "DotGothic16-Regular"; src: url('DotGothic16-Regular.ttf'); 
+} 
