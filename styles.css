@@ -1,6 +1,7 @@
 body{
     height:100vh;
     background-color: #f4b3ce;
+    margin:0px;
 }
 
 h1, footer {
@@ -8,17 +9,22 @@ h1, footer {
     color: #8C88BA;
     font-family: DotGothic16-Regular , Arial , Helvetica;
     font-weight: bold;
+    background-color: #faefd7;
+    padding: 5px 0;
+    width: 100%;
+    margin: 0px;
 }
 
 .btnContainer {
     display: flex;
     justify-content: center;
+    margin: 5px;
 }
 .container {
     display:flex;
     flex-wrap: wrap;
     justify-content:center; 
-    margin: 30%;
+    margin: 2.5% 30%;
     margin-top: 2.5%;
     background-color: white;
     border-radius: 6px;
@@ -86,11 +92,7 @@ button {
     outline:none
 }
 footer {
-    background-color: darkgrey;
-    padding: 10px 0;
-    font-weight: bold;
-    display: flex;
-    flex-direction: block;
+    
 
 }
 
