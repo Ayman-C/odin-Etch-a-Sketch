@@ -61,6 +61,10 @@ h1 {
     
 }
 
+.btnColor:focus{
+    border:0.2em solid yellow;
+}
+
 button {
     box-shadow: none;
 }
