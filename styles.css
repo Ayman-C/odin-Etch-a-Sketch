@@ -91,6 +91,8 @@ h1, footer {
 button {
     outline:none
 }
+footer {
+    display:inline-block}
 
 
 @font-face { 
