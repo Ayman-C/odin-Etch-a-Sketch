@@ -32,7 +32,14 @@ function hoverDisplay(color='black'){
     const squares=document.querySelectorAll(".square");
     squares.forEach(gridSquare => {
         gridSquare.addEventListener("mouseover" , function(evt) {
-            evt.target.style.background=color
+            if (color==="Rainbow") {
+                evt.target.style.background=randomHexColor();
+                console.log("rainbow fail")
+            }
+            else {
+            evt.target.style.background=color;
+            console.log(`this is ${color}`)
+            }
         })
     })
 }
@@ -72,4 +79,9 @@ function chooseGridSize() {
 }
 
 
-    
+function randomHexColor(){
+    const randomHexColor='#000000'
+    //const hexConversion={0:0,1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9,10:"a",11:"b",12:"c",13:"d",14:"e",15:"f"}
+    //return randomHexColor.replace(/0/g,  function(){return hexConversion[Math.floor(Math.random()*16)]})
+    return randomHexColor.replace(/0/g,  function(){return Math.floor(Math.random()*16).toString(16)})
+}

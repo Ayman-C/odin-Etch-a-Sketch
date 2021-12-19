@@ -53,6 +53,13 @@ h1 {
     width: 4%;
    
 }
+.btnRainbow{
+    color:white;
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+    border-radius: 10px;
+    width: 5%;
+   
+}
 .btnEraser{
     color: red;
     background-color: white;
@@ -65,9 +72,6 @@ h1 {
     border:0.2em solid yellow;
 }
 
-button {
-    box-shadow: none;
-}
 
 .btnClear {
     color: black;
