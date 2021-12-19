@@ -1,5 +1,3 @@
-
-
 body{
     height:100vh;
     background-color: #f4b3ce;
@@ -18,22 +16,13 @@ h1, footer {
     width: 100%;
     margin: 0px;
 }
-
-.btnContainer {
-    display: flex;
-    justify-content: center;
-    margin: 5px;
-}
 .container {
     display:flex;
     flex-wrap: wrap;
     justify-content:center; 
-    margin: 2.5% 30%;
-    margin-top: 2.5%;
+    margin: 1% 30%;
     background-color: white;
     border-radius: 6px;
-    flex-grow: 1 0 auto;
-
 }
 .gridContainer {
     border: 2em solid #68d1c5; 
@@ -42,63 +31,47 @@ h1, footer {
     height: 0;
     background-color: white;
 }
-
+.btnContainer {
+    display: flex;
+    justify-content: center;
+}
+.btnColor{
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    border-style: none;
+    margin: 1% 2.5px;
+}
+.btnColor:focus{
+    border:0.2em solid rgba(255, 0, 0, .3);
+}
 .btnBlack{
-    color: black;
     background-color: black;
-    border-radius: 10px;
-    width: 4%;
 }
 .btnRed{
-    color: red;
-    background-color: red;
-    border-radius: 10px;
-    width: 4%;
+    background-color: #F59A8E;
 }
 .btnBlue{
-    color: blue;
-    background-color: blue;
-    border-radius: 10px;
-    width: 4%;
+    background-color: #75cfe0;
 }
 .btnGreen{
-    color: green;
-    background-color: green;
-    border-radius: 10px;
-    width: 4%;
-   
+    background-color: #B6E6BD;
 }
 .btnRainbow{
-    color:white;
     background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
-    border-radius: 10px;
-    width: 5%;
-   
-}
-.btnEraser{
-    color: red;
-    background-color: white;
-    border-radius: 10px;
-    width: 4%;
-    
 }
 
-.btnColor:focus{
-    border:0.2em solid yellow;
+.btnEraser{
+    background-color: white;    
 }
 .btnClear {
-    color: black;
-    background-color: with;
+    color: white;
+    background-color: #8590f7;
     border-radius: 10px;
-    margin: 0 2%;
     width: 4%;
-}
-button {
-    outline:none
 }
 footer {
     display:inline-block}
-
 
 @font-face { 
     font-family: "DotGothic16-Regular"; src: url('DotGothic16-Regular.ttf'); 
