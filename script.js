@@ -37,9 +37,9 @@ function hoverDisplay(color='black'){
     })
 }
 
+
 function onClickReset(){
 const btn=document.querySelector(".btnClear")
-     //btn.addEventListener("click", removeHover)
      btn.addEventListener("click", deleteGrid)
      btn.addEventListener("click", function() {toggleContainerGrid(false)})
      btn.addEventListener("click", chooseGridSize)
