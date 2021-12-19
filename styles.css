@@ -31,6 +31,9 @@ h1, footer {
     height: 0;
     background-color: white;
 }
+.circle{
+    border-radius: 50%;
+}
 .btnContainer {
     display: flex;
     justify-content: center;
@@ -64,14 +67,18 @@ h1, footer {
 .btnEraser{
     background-color: white;    
 }
-.btnClear {
+.btnShape, .btnClear {
     color: white;
     background-color: #8590f7;
     border-radius: 10px;
     width: 4%;
+    border-style: none;
+    margin: 1% 2.5px;
 }
+
 footer {
-    display:inline-block}
+    display:inline-block;
+}
 
 @font-face { 
     font-family: "DotGothic16-Regular"; src: url('DotGothic16-Regular.ttf'); 

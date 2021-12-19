@@ -3,6 +3,7 @@ let rowLenght=50;
 let gridSize=rowLenght**2;
 let squareSize=`${100/rowLenght}%`
 createGrid()
+gridShape()
 toggleContainerGrid(true)
 hoverDisplay()
 chooseColor()
@@ -60,6 +61,11 @@ function Eraser(){
     const btn=document.querySelector(".btnEraser")
     btn.addEventListener("click", function() {hoverDisplay("white")})  
 }
+function gridShape(){
+    const btn=document.querySelector(".btnShape");
+    btn.addEventListener("click", toggleGridShape);
+    console.log("test")
+}
 function deleteGrid() {
     const squares=document.querySelectorAll(".square");
     squares.forEach(square=>square.remove())
@@ -72,4 +78,26 @@ function chooseGridSize() {
 function randomHexColor(){
     const randomHexColor='#000000'
     return randomHexColor.replace(/0/g,  function(){return Math.floor(Math.random()*16).toString(16)})
+}
+
+function toggleGridShape(){
+    const gridShape=document.querySelector(".btnShape");
+    let shape=gridShape.textContent;
+    if (shape==="square") {
+        const btns=document.querySelectorAll(".circle");
+        btns.forEach(btn => { 
+            btn.classList.add("square");
+            btn.classList.remove("circle");    
+        })
+        gridShape.textContent="circle";
+    }
+    else if (shape==="circle") {
+        const btns=document.querySelectorAll(".square");
+        btns.forEach(btn => { 
+            btn.classList.add("circle");
+            btn.classList.remove("square");    
+        })
+        gridShape.textContent="square";
+    }
+    
 }
