@@ -3,8 +3,10 @@ let rowLenght=50;
 let gridSize=rowLenght**2;
 let squareSize=`${100/rowLenght}%`
 createGrid()
+toggleContainerGrid(true)
 hoverDisplay()
 chooseColor()
+Eraser()
 onClickReset()
 
 function createGrid(){
@@ -17,14 +19,20 @@ function createGrid(){
         container.append(square)
     }
 }
-
+function toggleContainerGrid(onOff) {
+    const gridContainer=document.querySelector(".container")
+    if (onOff) {
+        gridContainer.classList.add("gridContainer")
+    }
+    else {
+        gridContainer.classList.remove("gridContainer")
+    }
+}
 function hoverDisplay(color='black'){
     const squares=document.querySelectorAll(".square");
     squares.forEach(gridSquare => {
         gridSquare.addEventListener("mouseover" , function(evt) {
-            //evt.target.style.background="pink"
             evt.target.style.background=color
-            //evt.target.classList.add("squareHovered")
         })
     })
 }
@@ -33,8 +41,10 @@ function onClickReset(){
 const btn=document.querySelector(".btnClear")
      //btn.addEventListener("click", removeHover)
      btn.addEventListener("click", deleteGrid)
+     btn.addEventListener("click", function() {toggleContainerGrid(false)})
      btn.addEventListener("click", chooseGridSize)
      btn.addEventListener("click", createGrid)
+     btn.addEventListener("click", function() {toggleContainerGrid(true)})
      btn.addEventListener("click", function() {hoverDisplay('black')})
     }
 
@@ -45,11 +55,10 @@ function chooseColor(){
         })
     }
 
-function removeHover(){
-    const squaresHovered=document.querySelectorAll(".squareHovered")
-    squaresHovered.forEach( squareHovered => {
-        squareHovered.classList.remove("squareHovered")
-    })}
+function Eraser(){
+    const btn=document.querySelector(".btnEraser")
+    btn.addEventListener("click", function() {hoverDisplay("white")})  
+}
 
 function deleteGrid() {
     const squares=document.querySelectorAll(".square");
