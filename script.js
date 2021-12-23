@@ -73,9 +73,12 @@ function deleteGrid() {
 }
 function chooseGridSize() {
     rowLenght=window.prompt("Please pick a grid row lenght")
-    gridSize=rowLenght**2
-    squareSize=`${100/rowLenght}%`
-}
+    if (rowlenght) {
+        rowlenght=50;    
+    }
+    gridSize=rowLenght**2;
+    squareSize=`${100/rowLenght}%`;
+    }
 function randomHexColor(){
     const randomHexColor='#000000'
     return randomHexColor.replace(/0/g,  function(){return Math.floor(Math.random()*16).toString(16)})
