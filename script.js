@@ -73,8 +73,9 @@ function deleteGrid() {
 }
 function chooseGridSize() {
     rowLenght=window.prompt("Please pick a grid row lenght")
-    if (rowlenght) {
-        rowlenght=50;    
+    if (isNaN(rowLenght) || +rowLenght===0) {
+        rowLenght=50;    
+        console.log(rowLenght)
     }
     gridSize=rowLenght**2;
     squareSize=`${100/rowLenght}%`;
